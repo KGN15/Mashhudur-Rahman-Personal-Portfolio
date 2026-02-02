@@ -106,7 +106,7 @@ const Contact = () => {
     timeline: "",
     message: "",
   });
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const [loading, setLoading] = useState(false);
   const [successPopup, setSuccessPopup] = useState(false);
   const [errorPopup, setErrorPopup] = useState(null);
@@ -126,7 +126,7 @@ const Contact = () => {
     setErrorPopup(null);
 
     try {
-      await axios.post("http://localhost:3000/api/message/create/message", {
+      await axios.post(`${API_URL}api/message/create/message`, {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -299,7 +299,7 @@ const Contact = () => {
                 icon={<MessageCircle size={18} />}
                 value={formData.service}
                 onChange={(v) => setFormData({ ...formData, service: v })}
-                options={["Web Development","Backend / API","Full-Stack Project","UI / UX Design","Other"]}
+                options={["Web Development", "Backend / API", "Full-Stack Project", "UI / UX Design", "Other"]}
               />
 
               <CustomSelect
