@@ -1,6 +1,6 @@
 @import "tailwindcss";
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 a {
   color: inherit;
@@ -11,4 +11,100 @@ button {
 }
 * {
   box-sizing: border-box;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+
+.fh {
+  background-image: url("./public/BG.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+}
+
+
+@media (min-width: 1024px) {
+  .fh {
+    font-size: 17rem; 
+    letter-spacing: -0.05em;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fh {
+    font-size: 10rem;
+    letter-spacing: -0.03em;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .fh {
+    font-size: 4rem; 
+    letter-spacing: -0.02em;
+    word-break: break-word; 
+    padding: 0 10px;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+  background: #020617; 
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #9333ea); 
+  border-radius: 20px; 
+  border: 2px solid #020617; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #22d3ee, #a855f7); 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #06b6d4 #020617;
+}
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

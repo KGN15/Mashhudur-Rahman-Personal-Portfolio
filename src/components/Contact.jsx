@@ -126,7 +126,7 @@ const Contact = () => {
     setErrorPopup(null);
 
     try {
-      await axios.post(`${API_URL}api/message/create/message`, {
+      await axios.post(API_URL, {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -168,26 +168,30 @@ const Contact = () => {
       )}
 
       {/* Success Popup */}
+      {/* Success Popup */}
       <Transition
         show={successPopup}
         as={Fragment}
         enter="transition ease-out duration-300"
-        enterFrom="opacity-0 scale-90"
+        enterFrom="opacity-0 scale-95"
         enterTo="opacity-100 scale-100"
         leave="transition ease-in duration-200"
         leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-90"
+        leaveTo="opacity-0 scale-95"
       >
-        <div className="absolute inset-0 bg-black/50 z-50 flex items-center justify-center">
-          <div className="bg-gray-800 rounded-3xl p-10 w-full max-w-md text-center border border-cyan-400">
-            <CheckCircle size={48} className="text-green-400 mx-auto mb-4" />
-            <h2 className="text-2xl text-white font-bold mb-2">Message Sent!</h2>
-            <p className="text-gray-300 mb-6">Your message has been successfully sent.</p>
+        
+        <div className="fixed inset-0 bg-black/80 z-[10000] flex items-center justify-center p-4 backdrop-blur-md">
+          <div className="bg-gray-900 rounded-3xl p-8 md:p-12 w-full max-w-md text-center border border-cyan-500/30 shadow-[0_0_50px_rgba(34,211,238,0.2)]">
+            <div className="bg-green-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle size={48} className="text-green-400" />
+            </div>
+            <h2 className="text-3xl text-white font-bold mb-3">Message Sent!</h2>
+            <p className="text-gray-400 mb-8 text-lg">Your message has been successfully received. We'll get back to you soon!</p>
             <button
               onClick={() => setSuccessPopup(false)}
-              className="px-6 py-3 bg-cyan-500 text-white rounded-xl hover:bg-cyan-600 transition"
+              className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-bold hover:brightness-110 transition-all shadow-lg shadow-cyan-500/20"
             >
-              OK
+              Awesome!
             </button>
           </div>
         </div>
@@ -204,7 +208,7 @@ const Contact = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-90"
       >
-        <div className="absolute inset-0 bg-black/50 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black/50 z-[10000] flex items-center justify-center">
           <div className="bg-gray-800 rounded-3xl p-10 w-full max-w-md text-center border border-red-400">
             <h2 className="text-2xl text-white font-bold mb-2">Error!</h2>
             <p className="text-gray-300 mb-6">{errorPopup}</p>
@@ -299,7 +303,15 @@ const Contact = () => {
                 icon={<MessageCircle size={18} />}
                 value={formData.service}
                 onChange={(v) => setFormData({ ...formData, service: v })}
-                options={["Web Development", "Backend / API", "Full-Stack Project", "UI / UX Design", "Other"]}
+                options={[
+                  "SEO",
+                  "WEB_APP",
+                  "BACKEND",
+                  "FULL_STACK",
+                  "UI_UX",
+                  "OTHER"
+                ]}
+
               />
 
               <CustomSelect
@@ -354,7 +366,7 @@ const Contact = () => {
               </p>
             </div>
 
-            {[{ icon: <Mail />, text: "kgn.mashudur@gmail.com" },
+            {[{ icon: <Mail />, text: "mdmashudurr81@gmail.com" },
             { icon: <Phone />, text: "+880 1996525342" },
             { icon: <MapPin />, text: "Gazipur, Bangladesh" }].map((i, idx) => (
               <div

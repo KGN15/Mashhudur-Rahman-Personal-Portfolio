@@ -44,7 +44,7 @@ const Navigation = () => {
     <div className="flex items-center justify-between h-16">
 
       {/* Logo */}
-      <img src={logo} className="w-24" alt="Logo" />
+      <img src={logo} className="w-20" alt="Logo" />
 
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-8">

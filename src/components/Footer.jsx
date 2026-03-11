@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, Code, Github, Linkedin, Mail, Facebook, FacebookIcon } from 'lucide-react';
 import logo from '../public/logo.png'
+import BG from '../public/BG.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -62,6 +63,9 @@ const Footer = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="w-full h-140 relative z-10">
+        <h1 className="fh text-[17rem] text-center font-bold">MASHHUDUR RAHMAN</h1>
       </div>
     </footer>
   );

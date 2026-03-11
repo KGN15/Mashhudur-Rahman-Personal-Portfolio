@@ -1,24 +1,48 @@
-import React from 'react';
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Route, Routes, BrowserRouter, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import Home from './pages/Home';
+import ProjectShowcase from './pages/ProjectShowcase';
+import Lenis from '@studio-freight/lenis';
 
-function App() {
+// পেজ চেঞ্জ হলে উপরে স্ক্রল করার জন্য ছোট একটি সাব-কম্পোনেন্ট
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+const App = () => {
+  // --- Lenis Smooth Scroll Setup ---
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2,
+      lerp: 0.03,
+      smoothWheel: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => lenis.destroy();
+  }, []);
+
   return (
-    <div className="bg-gray-900 text-white overflow-x-hidden">
-      <Navigation />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      {/* ScrollToTop অবশ্যই BrowserRouter এর ভেতরে থাকতে হবে */}
+      <ScrollToTop /> 
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/projects' element={<ProjectShowcase />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
