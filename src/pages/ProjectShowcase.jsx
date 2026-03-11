@@ -6,11 +6,11 @@ import { Link as RouterLink } from "react-router-dom";
 const ProjectShowcase = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-
+const GET_PROJECTS_API_URL = import.meta.env.VITE_PROJECT_API;
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/project/get");
+        const res = await axios.get(GET_PROJECTS_API_URL);
         setProjects(res.data.projects);
       } catch (err) {
         console.error("Fetch error:", err);
