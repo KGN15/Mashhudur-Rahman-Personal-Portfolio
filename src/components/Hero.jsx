@@ -10,6 +10,7 @@ const Hero = () => {
   const texts = [
     'Backend Developer',
     'Server Architect',
+    'Software Developer',
     'MERN Stack Developer',
     'Efficient Backend Engineer',
     'API Specialist'

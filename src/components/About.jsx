@@ -3,8 +3,18 @@ import { Download, Code, Palette, Globe, Server, ShieldCheck } from 'lucide-reac
 
 const About = () => {
   const handleDownloadCV = () => {
-    // In a real implementation, this would download the actual CV
-    console.log('CV download initiated');
+    const cvPath = "/Mashhudur_Rahman_Resume.pdf"; // তোমার file name
+
+    // Live open
+    window.open(cvPath, "_blank");
+
+    // Download
+    const link = document.createElement("a");
+    link.href = cvPath;
+    link.download = "Mashhudur_Rahman_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const features = [
@@ -56,7 +66,7 @@ const About = () => {
 
             <p className="text-gray-300 text-lg leading-relaxed mt-4">
               Also known as <span className="text-purple-400 font-medium">MR.</span>,
-              I am a backend-focused Web Developer with strong expertise in building
+              I am a software developer with strong expertise in building
               scalable server-side solutions, while also crafting clean and responsive
               frontend experiences. I enjoy creating efficient, user-friendly web systems
               and continuously exploring modern technologies to enhance my craft.
