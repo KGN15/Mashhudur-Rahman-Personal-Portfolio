@@ -81,15 +81,15 @@ const Hero = () => {
               className="p-4 rounded-full bg-gray-800/50 hover:bg-cyan-400/20 hover:shadow-[0_0_30px_rgba(0,245,255,0.5)] transition-all duration-300 group">
               <Github className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform" />
             </a>
-            <a href="nkedin.com/in/md-mashudur-rahman-233746384/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/mashhudur--rahman/" target="_blank" rel="noopener noreferrer"
               className="p-4 rounded-full bg-gray-800/50 hover:bg-purple-500/20 hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all duration-300 group">
               <Linkedin className="w-6 h-6 text-purple-500 group-hover:scale-110 transition-transform" />
             </a>
-            <a href="mailto:mdmashudurr81@gmail.com"
+            <a href="mailto:mashhudur.rahman.dev@gmail.com"
               className="p-4 rounded-full bg-gray-800/50 hover:bg-orange-500/20 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition-all duration-300 group">
               <Mail className="w-6 h-6 text-orange-500 group-hover:scale-110 transition-transform" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61583140887335"
+            <a href="https://www.facebook.com/profile.php?id=61582166207887"
               className="p-4 rounded-full bg-gray-800/50 hover:bg-orange-500/20 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] transition-all duration-300 group">
               <Facebook className="w-7 h-7 text-blue-600 group-hover:scale-110 transition-transform" />
             </a>

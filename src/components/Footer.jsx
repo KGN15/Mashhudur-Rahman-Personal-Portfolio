@@ -26,7 +26,7 @@ const Footer = () => {
               <Github className="w-6 h-6 text-cyan-400 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://linkedin.com/in/md-mashudur-rahman-233746384/"
+              href="https://www.linkedin.com/in/mashhudur--rahman/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-gray-800 hover:bg-purple-500/20 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all duration-300 group"
@@ -34,13 +34,13 @@ const Footer = () => {
               <Linkedin className="w-6 h-6 text-purple-500 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="mailto:kgn.mashudur@gmail.com"
+              href="mailto:mashhudur.rahman.dev@gmail.com"
               className="p-3 rounded-full bg-gray-800 hover:bg-orange-500/20 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] transition-all duration-300 group"
             >
               <Mail className="w-6 h-6 text-orange-500 group-hover:scale-110 transition-transform" />
             </a>
             <a
-              href="https://web.facebook.com/profile.php?id=61583140887335"
+              href="https://www.facebook.com/profile.php?id=61582166207887"
               className="p-3 rounded-full bg-gray-800 hover:bg-orange-500/20 hover:shadow-[0_0_20px_rgba(249,115,22,0.5)] transition-all duration-300 group"
               target="_blank"
               rel="noopener noreferrer"
