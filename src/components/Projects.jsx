@@ -23,12 +23,12 @@ const Projects = () => {
       gradient: 'from-yellow-500 to-yellow-900'
     },
     {
-      title: 'Portfolio Website',
-      description: 'A responsive portfolio website with smooth animations, dark mode toggle, and optimized performance for showcasing creative work.',
-      image: 'https://i.pinimg.com/736x/75/22/77/7522775396d64dcd2ca3b5a64245fb01.jpg',
-      technologies: ['JavaScript','Three.js', 'GSAP', 'CSS3', 'HTML5'],
-      github: 'https://github.com/KGN15/Mashhudur-Rahman-portfolio/tree/main/Asinment-4-Portfolio-Website',
-      live: 'https://mashhudurrahman.netlify.app/',
+      title: 'B2B SAAS Pltaform',
+      description: 'Problem-solving focus MostafizTradeHub digitizes the traditional sales-rep-to-retailer pipeline in Bangladesh. It enables sales managers to manage wholesale ',
+      image: 'https://i.pinimg.com/736x/bf/af/13/bfaf1370e3a61238a08c6d43386dc5d0.jpg',
+      technologies: ['JavaScript','React.js', 'Rest API', 'CSS3', 'Firebase', 'MongoDB', 'Node.js', 'Express.js', 'JWT'],
+      github: 'https://privaterepositorynoticepage.netlify.app/',
+      live: 'https://mostafiztradehub.vercel.app/',
       gradient: 'from-orange-500 to-red-600'
     }
   ];
